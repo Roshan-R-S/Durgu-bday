@@ -2,7 +2,6 @@ import { useEffect } from "react";
 import Lenis from "lenis";
 import ParticleField from "./components/ParticleField";
 import Hero from "./components/Hero";
-import Countdown from "./components/Countdown";
 import PhotoGallery from "./components/PhotoGallery";
 import FriendsGallery from "./components/FriendsGallery";
 import VideoMemories from "./components/VideoMemories";
@@ -45,7 +44,6 @@ export default function App() {
             }}
           />
 
-          <Countdown />
           <PhotoGallery />
           <FriendsGallery />
           <VideoMemories />
