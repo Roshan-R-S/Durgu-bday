@@ -100,6 +100,25 @@ const LETTERS = [
       "Your forever irritating but overprotective Anna,\nPrajith",
     ],
   },
+  {
+    id: "sivanesh",
+    sender: "Sivanesh",
+    accentColor: "#dda15e",
+    paragraphs: [
+      "Hello durgsss ehhhh, 👀",
+      "Many more happy returnnss of the dayyyy!! 🧡",
+      "Thank youu so muchhh for being a very good friend, again an unexpected friendship turned to be forever one. 🫂🧿",
+      "Always a go to person for me Ethachum na! Thank you hearing out my rants, stories. 😭🫡",
+      "Started from asking doubts uhh, apro semester la soli kuduthrukaaa, most times kaapathirkaa!! Healer most times!! Unexpectedly Oru vaati kalaicha 🤣 still remember what you told me!! Goyyala maraka maaten da Antha conference call ah! Symposium apo!! Adi paavi!! 😏",
+      "Apo arambichathu! Poga poga! We ranted out our stories! Paatha you know all gossips of clg uhh!! 🤣🔥 Seriyaanaa aalu! Then unalaa Krithi frnd aana! All those ppl! Beautiful souls! 🧡",
+      "Apro selaiyur came! Anuu ne na frnds aanom!! Beautiful Kutty bond btwn 3 of us! So lovely! Will cherish it foreverrr!! 🫂",
+      "TRIOOO! 😂",
+      "Ellam unala than!! Will never ever forget in my lifee!! Beautiful soul da nee!! 😭🤍",
+      "Nalla santhoshamaa life la iruu!! Happy moments create panlam moree and more!!",
+      "Seekrama nama Mtech CSE Oru wicket poga poguthu nu nenaikre! Kalyanatha solre 🤣 VAAZHTHUKAL!! Markama kuptru! Motha banthii naanga tha 🤣🫡",
+      "HAPPPIESTTT 23 DURGSS EHH!! 🥂💃"
+    ],
+  },
 ];
 
 // ── Playback speed multiplier (20x = very fast, aesthetic only) ───────────
@@ -305,15 +324,16 @@ export default function SecretLetter() {
             Each envelope holds something written just for you. Open them in any order.
           </p>
 
-          {/* 4-card envelope grid */}
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-5">
+          {/* Centered envelope layout */}
+          <div className="flex flex-wrap justify-center gap-4 sm:gap-5">
             {LETTERS.map((letter) => (
-              <EnvelopeCard
-                key={letter.id}
-                letter={letter}
-                isRead={readLetters.has(letter.id)}
-                onClick={() => openLetter(letter)}
-              />
+              <div key={letter.id} className="w-[calc(50%-0.5rem)] sm:w-[180px]">
+                <EnvelopeCard
+                  letter={letter}
+                  isRead={readLetters.has(letter.id)}
+                  onClick={() => openLetter(letter)}
+                />
+              </div>
             ))}
           </div>
         </div>
