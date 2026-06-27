@@ -7,6 +7,7 @@ import FriendsGallery from "./components/FriendsGallery";
 import VideoMemories from "./components/VideoMemories";
 import SecretLetter from "./components/SecretLetter";
 import FinalSurprise from "./components/FinalSurprise";
+import MouseTrail from "./components/MouseTrail";
 
 export default function App() {
   useEffect(() => {
@@ -30,6 +31,7 @@ export default function App() {
 
   return (
     <>
+      <MouseTrail />
       <ParticleField />
       <main className="relative z-10 min-h-screen bg-transparent text-cream overflow-hidden">
         <div className="relative z-10">
